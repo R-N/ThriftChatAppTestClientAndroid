@@ -1,0 +1,76 @@
+apply plugin: 'com.android.application'
+//apply plugin: 'java'
+android {
+    compileSdkVersion 26
+    buildToolsVersion "25.0.1"
+    defaultConfig {
+        applicationId "com.linearch.thrifttest"
+        minSdkVersion 15
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    dexOptions {
+        incremental true
+    }
+
+
+    packagingOptions {
+        exclude 'META-INF/INDEX.LIST'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/io.netty.versions.properties'
+        exclude 'META-INF/com.linecorp.armeria.versions.properties'
+    }
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+    android {
+        useLibrary 'org.apache.http.legacy'
+    }
+    dependencies {
+        compile "org.apache.httpcomponents:httpcore:4.4.1"
+        //compile "org.apache.httpcomponents:httpclient-android:4.3.5.1"
+        //compile 'org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.4.1'
+        compile 'cz.msebera.android:httpclient:4.4.1.2'
+        compile "org.apache.thrift:libthrift:0.10.0"
+
+
+        /*['armeria',
+         'armeria-grpc',
+         'armeria-jetty',
+         'armeria-kafka',
+         'armeria-logback',
+         'armeria-retrofit2',
+         'armeria-thrift',
+         'armeria-tomcat',
+         'armeria-zipkin',
+         'armeria-zookeeper'].each {
+            compile "com.linecorp.armeria:${it}:0.54.0"
+        }*/
+
+        compile 'org.xerial:sqlite-jdbc:3.20.0'
+        compile 'joda-time:joda-time:2.9.9'
+
+        compile fileTree(dir: 'libs', include: ['*.jar'])
+        androidTestCompile('com.android.support.test.espresso:espresso-core:2.0', {
+            exclude group: 'com.android.support', module: 'support-annotations'
+        })
+        compile 'org.glassfish:javax.annotation:10.0-b28'
+        compile 'com.android.support:appcompat-v7:26.+'
+        compile 'com.android.support.constraint:constraint-layout:1.0.2'
+        compile 'com.android.support:design:26.+'
+
+        testCompile 'junit:junit:4.12'
+    }
+}
+
+dependencies {
+}

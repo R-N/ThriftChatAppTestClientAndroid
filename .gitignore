@@ -8,6 +8,14 @@ Desktop.ini
 # Recycle Bin used on file shares
 $RECYCLE.BIN/
 
+app/build/
+
+build/
+
+*.class
+*.zip
+*.apk
+
 # Windows Installer files
 *.cab
 *.msi

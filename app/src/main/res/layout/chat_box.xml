@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="top|right"
+    android:layout_marginBottom="5dp"
+    android:layout_marginTop="5dp"
+    android:foregroundGravity="top|right"
+    android:gravity="top|right"
+    android:orientation="horizontal"
+    app:layout_anchorGravity="top|right">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|right"
+        android:layout_weight="1"
+        android:foregroundGravity="top|right"
+        android:gravity="top|right"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/usernameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:foregroundGravity="right"
+            android:text="Username"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            tools:text="Username" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|right"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="0"
+                android:foregroundGravity="bottom|right"
+                android:gravity="bottom|right"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/readText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="Read"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    tools:text="Read" />
+
+                <TextView
+                    android:id="@+id/timestampText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="24:59 PM"
+                    android:textSize="12sp"
+                    tools:text="24:59 PM" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|right"
+                android:layout_marginRight="-20dp"
+                android:layout_weight="0"
+                android:background="?android:attr/fastScrollPreviewBackgroundRight"
+                android:foregroundGravity="top|right"
+                android:longClickable="false">
+
+                <TextView
+                    android:id="@+id/chatText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical|fill_vertical"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_weight="0"
+                    android:foregroundGravity="right|center_vertical|fill_vertical"
+                    android:gravity="right|center_vertical|fill_vertical"
+                    android:text="asdf"
+                    android:textAlignment="viewStart"
+                    android:textIsSelectable="true"
+                    android:textSize="16sp"
+                    android:visibility="visible"
+                    tools:text="asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/displayPicture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|center_vertical|fill_vertical|fill"
+        android:layout_marginLeft="5dp"
+        android:layout_weight="0"
+        android:background="@android:color/transparent"
+        android:foregroundGravity="right|center_vertical|fill_vertical|fill"
+        app:srcCompat="@mipmap/ic_launcher_round" />
+
+</LinearLayout>
