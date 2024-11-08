@@ -1,5 +1,5 @@
 # ThriftChatAppTestClientAndroid
-Chat App project made to play with thrift and android. Android client.
+Chat App built using thrift for android. Android client.
 
 Server: https://github.com/R-N/ThriftChatAppTestServerHeroku
 
